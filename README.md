@@ -1,2 +1,2 @@
 # solutions_cpp
-All problems that I've solved in CPP.
+All solutions for the problems I solved in CPP.
