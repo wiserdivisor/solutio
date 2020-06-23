@@ -7,4 +7,5 @@ int main()
     int *A = new int[n];
     while(std::cin>>A[i++]);
     while(std::cout<<A[--n]<<' '&&n);
+    //Input a char to stop.
   }

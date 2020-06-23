@@ -1,27 +1,29 @@
 #include<iostream>
 /*Find the greatest/smallest positive integer*/
 
-int min(int x, int y)
+int min(int x=0, int y=x)
   {
     return (x<=y)?x:y;
   }
 
-int max(int x, int y)
+int max(int x=0, int y=x)
   {
     return (x>=y)?x:y;
   }
 
 
-int quickmin(int arr[], int n)
+int quickmin(int arr[], int s, int e)
   {
-    int half = n/2;
-    return min(quickmin(arr[]),quickmin());
+    while(s<e)
+      {
+        return min(quickmin(arr, s, e-1),quickmin());
+      }
   }
 
-int quickmax(arr[])
+int quickmax(int arr[], int s, int e)
   {
-    int half = n/2;
-    return max(quickmax(),quickmax());
+    int half = e/2;
+    return max(quickmax(arr,s),quickmax());
   }
 
 int main()
