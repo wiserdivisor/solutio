@@ -1,7 +1,7 @@
 #include<iostream>
-
+#include<sstream>
+#include<string>
 int main()
     {
-      int e=5;
-      std::cout<<e/2;
+      
     }
