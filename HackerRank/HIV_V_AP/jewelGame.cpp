@@ -1,6 +1,4 @@
-#include<iostream>
-
-#include<iostream>
+#include<bits/stdc++.h>
 
 bool palinCheck(std::string x)
   {
@@ -13,17 +11,19 @@ int main()
       std::cin>>t;
       while(t--)
         {
-          std::string s, a="";
+          std::set<int>res;
+          std::string s;
           std::cin>>s;
           for(int i=0; i<=s.size(); i++)
             {
-              for(int j=2; j<=s.size(); j+=2)
+              for(int j=0; j<=s.size(); j++)
                 {
                   std::string r = s.substr(i,i+j);
                   int t = r.size();
-                  a += (palinCheck(r)==1 && t%2==0?std::to_string(t/2):"");
+                  res.insert(palinCheck(r)==1 && t%2==0?t/2:0);
                 }
             }
-          std::cout<<a[0];
+          std::cout<<*res.rbegin()<<'\n';
+          res.clear();
         }
     }
